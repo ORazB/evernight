@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TampilanController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Foundation\Application;
@@ -16,6 +17,8 @@ Route::get('/', [TampilanController::class, 'index']);
 //         'phpVersion' => PHP_VERSION,
 //     ]);
 // });
+
+Route::resource('news', NewsController::class);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
