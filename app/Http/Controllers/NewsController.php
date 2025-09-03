@@ -17,4 +17,11 @@ class NewsController extends Controller
         ]);
     }
 
+  public function index() {
+    $news = News::latest()->get();
+    return inertia::render('News/index', [
+      'news' => $news
+    ]);
+  }
+
 }
