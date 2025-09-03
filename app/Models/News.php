@@ -14,5 +14,5 @@ class News extends Model
         'deskripsi',
         'kategori',
         'author'
-    ];
+];
 }
