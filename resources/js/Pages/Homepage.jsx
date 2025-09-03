@@ -8,7 +8,7 @@ import Footer from '@/Components/Footer'
 export default function Homepage(props) {
     console.log('data = ', props.news)
     return(
-        <div className='flex-col justify-center items-center min-h-screen bg-neutral-800 text-white text-2xl'>
+        <div className='flex-col justify-center items-center min-h-screen text-white text-2xl'>
             <Head judul={props.judul} />
             <Navbar />
             <HomeContent />
