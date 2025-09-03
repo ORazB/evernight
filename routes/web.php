@@ -3,7 +3,6 @@
 use App\Http\Controllers\TampilanController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\NewsController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
