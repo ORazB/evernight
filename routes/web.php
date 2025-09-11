@@ -7,6 +7,9 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 Route::get('/', [TampilanController::class, 'index']);
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [
@@ -21,7 +24,7 @@ Route::resource('news', NewsController::class);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');    
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
