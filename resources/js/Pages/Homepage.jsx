@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Head, Link } from '@inertiajs/react';
+import ScrollReveal from 'scrollreveal';
 // Components
 import Navbar from '@/Components/Navbar'
 import Footer from '@/Components/Footer'
 
 export default function Homepage(props) {
+
+    useEffect(() => {
+        ScrollReveal().reveal(".reveal", {
+            duration: 750,
+            origin: "bottom",
+            distance: "50px",
+            reset: false
+        });
+        ScrollReveal().reveal(".reveal-late-1", {
+            duration: 750,
+            origin: "bottom",
+            distance: "50px",
+            reset: false,
+            delay: 100
+        });
+        ScrollReveal().reveal(".reveal-late-2", {
+            duration: 750,
+            origin: "bottom",
+            distance: "50px",
+            reset: false,
+            delay: 200
+        });
+    })
+
     console.log('data = ', props.news)
     return (
-        <div className='flex-col justify-center items-center overflow-y-hidden text-2xl'>
+        <div className='flex-col justify-center items-center text-2xl'>
             <Head judul={props.judul} />
             <Navbar />
 
@@ -16,17 +41,17 @@ export default function Homepage(props) {
                 backgroundSize: '30px 30px',
                 backgroundPosition: '0 0, 15px 15px',
                 backgroundColor: '#f7fafc',
-            }} className="hero py-32 max-h-screen">
-                
+            }} className="hero pt-32 max-h-screen overflow-y-hidden">
+
                 <div className="grid place-items-center gap-8">
-                    <div className='logo'>
+                    <div className='reveal logo'>
                         <img className="w-[400px]" src="./images/logo.png" alt="Logo" />
                     </div>
 
-                    <p className='font-semibold tracking-wider w-[45%] text-4xl line-height text-center'>Redefining digital journalism
+                    <p className='reveal-late-1 font-semibold tracking-wider w-[45%] text-4xl line-height text-center'>Redefining digital journalism
                         with top-tier news, blogs, and strories from every corner of the globe</p>
 
-                    <div>
+                    <div className='reveal-late-2'>
                         <img className="w-[550px]" src="./images/touru.png" alt="Logo" />
                     </div>
                 </div>
