@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useForm } from "@inertiajs/react";
+import ImageDrop from "@/Components/ImageDrop";
 
 export default function Create() {
   const { data, setData, post, errors } = useForm({
@@ -7,11 +8,14 @@ export default function Create() {
     deskripsi: "",
     kategori: "",
     author: "",
+    image: null, // add this
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    post(route("news.store"));
+    post(route("news.store"), {
+      forceFormData: true,
+    });
   };
 
   return (
@@ -40,9 +44,10 @@ export default function Create() {
           {errors.deskripsi && <div className="text-red-500">{errors.deskripsi}</div>}
         </div>
 
-         <div>
+        <div>
           <label className="block">Kategori</label>
-          <textarea
+          <input
+            type="text"
             value={data.kategori}
             onChange={(e) => setData("kategori", e.target.value)}
             className="border p-2 w-full"
@@ -50,6 +55,9 @@ export default function Create() {
           {errors.kategori && <div className="text-red-500">{errors.kategori}</div>}
         </div>
 
+        {/* Dropzone */}
+        <ImageDrop onFileSelect={(file) => setData("image", file)} error={errors.image} />
+          
         <div>
           <label className="block">Author</label>
           <input

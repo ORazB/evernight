@@ -1,6 +1,6 @@
 const Navbar = () => {
     return (
-        <section className="bg-white sticky top-0 z-[1000]">
+        <section className="bg-white sticky w-full top-0 z-[1000]">
             <div className="container px-20 flex justify-between items-center mx-auto p-4">
 
                 <a href="#">

@@ -32,8 +32,7 @@ export default function Login() {
                     </Link>
                 </div>
 
-                <p className="text-7xl font-[1000] mb-6 text-black tracking-normal">Sign i
-                    n</p>
+                <p className="text-7xl font-[1000] mb-6 text-black tracking-normal">Sign in</p>
 
                 <button className="flex items-center justify-center border rounded-lg w-[55%] py-4 mb-6">
                     <FcGoogle className="mr-2" size={20} /> <span className='text-black font-extrabold'>Log in with Google</span>
@@ -66,7 +65,7 @@ export default function Login() {
                     <button
                         type="submit"
                         disabled={processing}
-                        className="bg-[#E6C558] text-white font-semibold py-2 rounded-lg hover:bg-yellow-500 w-[55%]"
+                        className="w-full bg-[#E6C558] text-white font-semibold py-2 rounded-lg hover:bg-yellow-500 w-[55%]"
                     >
                         Log in
                     </button>
