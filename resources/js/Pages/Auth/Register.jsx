@@ -17,7 +17,7 @@ export default function Register() {
     return (
         <div className="h-screen grid grid-cols-2 bg-white">
             {/* Left Side - Image */}
-            <div className="flex flex-col bg-[#f0f0ed] w-[65%] relative rounded-xl m-5 p-5 overflow-visible">
+            <div className="flex flex-col bg-[#FAFAFA] w-[65%] relative rounded-xl m-5 p-5 overflow-visible">
                 <img src="./images/Logo.png" alt="logo-left" className="w-[120px] mb-6" />
 
                 <div className="flex flex-col justify-center h-full relative">

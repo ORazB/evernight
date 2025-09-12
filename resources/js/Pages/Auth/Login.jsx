@@ -16,7 +16,7 @@ export default function Login() {
     return (
         <div className="h-screen grid grid-cols-2 bg-white">
             {/* Left Side - Image */}
-            <div className="flex flex-col bg-[#f0f0ed] w-[65%] relative rounded-xl m-5 p-5 overflow-visible">
+            <div className="flex flex-col bg-[#FAFAFA] w-[65%] relative rounded-xl m-5 p-5 overflow-visible">
                 <img src="./images/Logo.png" alt="logo-left" className="w-[120px] mb-6" />
 
                 <div className="flex flex-col justify-center h-full relative">
@@ -28,11 +28,11 @@ export default function Login() {
             <div className="flex flex-col justify-center px-16 relative">
                 <div className="absolute top-6 right-6">
                     <Link href={route('register')} className="text-sm text-[#919493]">
-                        Don't have an account? <span className="font-bold text-black">Sign Up</span>
+                        Don't have an account? <span className="font-semibold text-black">Sign Up</span>
                     </Link>
                 </div>
 
-                <p className="text-7xl font-[1000] mb-6 text-black tracking-normal">Sign in</p>
+                <p className="text-7xl font-semibold mb-6 text-black tracking-normal">Sign in</p>
 
                 <button className="flex items-center justify-center border rounded-lg w-[55%] py-4 mb-6">
                     <FcGoogle className="mr-2" size={20} /> <span className='text-black font-extrabold'>Log in with Google</span>
