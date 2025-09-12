@@ -159,7 +159,7 @@ export default function Homepage(props) {
                     <h2 className='text-2xl italic font-bold tracking-wide'>Latest</h2>
                 </div>
 
-                <div className="grid grid-cols-3 mt-4">
+                <div className="grid grid-cols-3 gap-4 mt-4">
                     {props.news && props.news.length > 0 ? props.news.map((data, i) => {
                         return (
                             <div key={i} className="bg-white text-black shadow-lg border rounded-lg overflow-hidden">
