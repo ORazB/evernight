@@ -34,7 +34,7 @@ export default function Register() {
                     </Link>
                 </div>
 
-                <p className="text-7xl font-[1000] mb-6 text-black tracking-normal">Sign Up</p>
+                <p className="text-7xl font-semibold mb-6 text-black tracking-wide">Sign Up</p>
 
                 <button className="flex items-center justify-center border rounded-lg w-[55%] py-4 mb-6">
                     <FcGoogle className="mr-2" size={20} /> <span className='text-black font-extrabold'>Sign up with Google</span>
@@ -78,7 +78,7 @@ export default function Register() {
                     <button
                         type="submit"
                         disabled={processing}
-                        className="w-full bg-[#E6C558] text-white font-semibold py-2 rounded-lg hover:bg-yellow-500 w-[55%]"
+                        className="bg-[#E6C558] text-white font-semibold py-2 rounded-lg hover:bg-yellow-500 w-[55%]"
                     >
                         Create account
                     </button>

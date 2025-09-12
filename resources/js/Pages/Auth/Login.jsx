@@ -65,7 +65,7 @@ export default function Login() {
                     <button
                         type="submit"
                         disabled={processing}
-                        className="w-full bg-[#E6C558] text-white font-semibold py-2 rounded-lg hover:bg-yellow-500 w-[55%]"
+                        className="bg-[#E6C558] text-white font-semibold py-2 rounded-lg hover:bg-yellow-500 w-[55%]"
                     >
                         Log in
                     </button>
